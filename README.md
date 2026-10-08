@@ -15,7 +15,8 @@ Then visit <http://localhost:8000>.
 ## Project files
 
 - `index.html` — page structure and portal content
-- `style.css` — responsive layout, visual styling, and theme tokens
-- `script.js` — client-side interactions and progressive enhancements
+- `style.css` — responsive layout and visual styling
+- `app.js` — application interactions
+- `sites.js` — government site and directory data
 
 This is an independent frontend prototype and is not an official Government of India website or service. Always use the linked official government portals to submit applications or personal information.
