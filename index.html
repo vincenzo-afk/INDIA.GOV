@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bharat Portal | भरत पोर्टल: One portal. Every government service.</title>
+  <meta name="description" content="Bharat Portal: the single digital front door to the Government of India. Ask in plain language and get answers from official sources.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- National identity strip (fixed tricolor band) -->
+  <div class="tricolor-band" aria-hidden="true"></div>
+
+  <!-- Skip link for keyboard users -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="Bharat Portal home">
+        <span class="emblem" aria-hidden="true"><span class="chakra"></span></span>
+        <span class="brand-text">Bharat Portal <span class="brand-hi">| भरत पोर्टल</span></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#government">Government</a></li>
+          <li><a href="#citizens">Citizens</a></li>
+          <li><a href="#business">Business</a></li>
+          <li><a href="#sectors">Sectors</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#documents">Documents</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="pill-btn lang-btn" id="langToggle" type="button" aria-label="Switch language">
+          <span data-lang-label>English / हिन्दी</span>
+        </button>
+        <button class="pill-btn primary-btn signin-btn" type="button">Sign In</button>
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="icon-btn hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile overlay nav -->
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <nav aria-label="Mobile">
+      <ul>
+        <li><a href="#government">Government</a></li>
+        <li><a href="#citizens">Citizens</a></li>
+        <li><a href="#business">Business</a></li>
+        <li><a href="#sectors">Sectors</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#documents">Documents</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top" aria-labelledby="heroTitle">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-watermark" aria-hidden="true"><span class="chakra big"></span></div>
+
+      <div class="hero-content">
+        <p class="eyebrow reveal"><span aria-hidden="true">🇮🇳</span> The official front door to the Government of India</p>
+
+        <h1 id="heroTitle" class="hero-title reveal">
+          <span class="line">Ask anything.</span>
+          <span class="line">Get answers from <span class="underline-wrap"><span class="underlined">official</span><svg class="underline-svg" viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 14 C 50 4, 120 22, 197 8" fill="none" stroke="#FF671F" stroke-width="5" stroke-linecap="round"/></svg></span> government sources.</span>
+        </h1>
+
+        <p class="hero-sub reveal">Bharat Portal brings 6,700+ Indian government websites into one place. Ask in plain language, get a clear answer and the exact next step, in English, Hindi, or your language.</p>
+
+        <!-- AI search bar -->
+        <form class="search-wrap reveal" id="searchForm" role="search" autocomplete="off">
+          <div class="search-bar">
+            <button class="mic-btn" type="button" aria-label="Voice search" title="Voice search">
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3" fill="currentColor"/><path d="M5 11a7 7 0 0 0 14 0M12 18v4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <span class="tooltip">Voice search</span>
+            </button>
+            <label class="sr-only" for="searchInput">Ask a government question</label>
+            <input id="searchInput" class="search-input" type="text" placeholder="" maxlength="200">
+            <span class="caret" aria-hidden="true">|</span>
+            <button class="submit-btn" type="submit" aria-label="Submit question">
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+        </form>
+
+        <div class="chips reveal" role="group" aria-label="Popular topics">
+          <button class="chip" type="button" data-q="How do I renew my passport?">Passport</button>
+          <button class="chip" type="button" data-q="How do I apply for an Aadhaar card?">Aadhaar</button>
+          <button class="chip" type="button" data-q="How do I get a PAN card?">PAN Card</button>
+          <button class="chip" type="button" data-q="How do I check my ration card status?">Ration Card</button>
+          <button class="chip" type="button" data-q="What scholarships can students get?">Scholarships</button>
+          <button class="chip" type="button" data-q="How do I file my income tax return?">Income Tax</button>
+          <button class="chip" type="button" data-q="How do I register my business under Udyam?">Business Registration</button>
+          <button class="chip" type="button" data-q="How do I book a train ticket?">Railways</button>
+        </div>
+
+        <!-- Answer panel -->
+        <div class="answer-panel" id="answerPanel" aria-live="polite" hidden>
+          <div class="answer-head">
+            <span class="answer-label">Answer</span>
+            <span class="answer-q" id="answerQ"></span>
+          </div>
+          <div class="thinking" id="thinking" hidden><span></span><span></span><span></span></div>
+          <p class="answer-text" id="answerText"></p>
+          <div class="sources" id="sources" hidden>
+            <span class="sources-label">Official sources</span>
+            <div class="source-chips" id="sourceChips"></div>
+          </div>
+        </div>
+
+        <!-- Rotating sphere of government website previews -->
+        <div class="sphere-wrap reveal">
+          <div class="sphere" id="sphere" aria-label="Rotating preview of government websites" role="img"></div>
+          <p class="caption">6,700+ government websites, one place.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION A: HOW IT WORKS ============ -->
+    <section class="section" id="how" aria-labelledby="howTitle">
+      <div class="container">
+        <h2 id="howTitle" class="section-title reveal">How it works</h2>
+        <div class="grid-3">
+          <article class="card step-card reveal">
+            <div class="step-icon saffron" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28"><path d="M4 5h16v10H9l-5 4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>1. Ask in plain language</h3>
+            <p>Type your question the way you would say it to a person. No government jargon needed.</p>
+          </article>
+          <article class="card step-card reveal">
+            <div class="step-icon green" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M8.5 12l2.5 2.5L16 9.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>2. Get a sourced answer</h3>
+            <p>Only official sources. No ads. Your privacy is protected.</p>
+          </article>
+          <article class="card step-card reveal">
+            <div class="step-icon navy" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28"><path d="M4 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>3. Take the next step</h3>
+            <p>We link you straight to the service, form, or office you need.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION B: POPULAR SERVICES ============ -->
+    <section class="section alt" id="services" aria-labelledby="servicesTitle">
+      <div class="container">
+        <h2 id="servicesTitle" class="section-title reveal">Popular services</h2>
+        <div class="grid-4" id="serviceGrid">
+          <article class="card service-card reveal">
+            <span class="service-icon c0" aria-hidden="true">P</span>
+            <h3>Passport Seva</h3>
+            <p>Apply for, renew, or track a passport online.</p>
+            <a href="#services" class="text-link">Start →</a>
+          </article>
+          <article class="card service-card reveal">
+            <span class="service-icon c1" aria-hidden="true">D</span>
+            <h3>DigiLocker</h3>
+            <p>Store and share official documents digitally.</p>
+            <a href="#services" class="text-link">Start →</a>
+          </article>
+          <article class="card service-card reveal">
+            <span class="service-icon c2" aria-hidden="true">U</span>
+            <h3>UMANG</h3>
+            <p>One app for many central and state services.</p>
+            <a href="#services" class="text-link">Start →</a>
+          </article>
+          <article class="card service-card reveal">
+            <span class="service-icon c0" aria-hidden="true">A</span>
+            <h3>Ayushman Bharat</h3>
+            <p>Check eligibility for national health coverage.</p>
+            <a href="#services" class="text-link">Start →</a>
+          </article>
+          <article class="card service-card reveal">
+            <span class="service-icon c1" aria-hidden="true">K</span>
+            <h3>PM-KISAN</h3>
+            <p>Status and registration for farmer income support.</p>
+            <a href="#services" class="text-link">Start →</a>
+          </article>
+          <article class="card service-card reveal">
+            <span class="service-icon c2" aria-hidden="true">I</span>
+            <h3>Income Tax e-Filing</h3>
+            <p>File returns and track refunds online.</p>
+            <a href="#services" class="text-link">Start →</a>
+          </article>
+          <article class="card service-card reveal">
+            <span class="service-icon c0" aria-hidden="true">Ud</span>
+            <h3>Udyam Registration</h3>
+            <p>Register your micro, small, or medium enterprise.</p>
+            <a href="#services" class="text-link">Start →</a>
+          </article>
+          <article class="card service-card reveal">
+            <span class="service-icon c1" aria-hidden="true">C</span>
+            <h3>CoWIN</h3>
+            <p>Vaccination certificates and related records.</p>
+            <a href="#services" class="text-link">Start →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION C: AUDIENCE TABS ============ -->
+    <section class="section" id="citizens" aria-labelledby="audienceTitle">
+      <div class="container">
+        <h2 id="audienceTitle" class="section-title reveal">Government by the people</h2>
+        <div class="tabs reveal" role="tablist" aria-label="Audience">
+          <div class="tab-bar" id="tabBar">
+            <button class="tab active" role="tab" aria-selected="true" aria-controls="tabPanel" data-tab="citizens" type="button">Citizens</button>
+            <button class="tab" role="tab" aria-selected="false" aria-controls="tabPanel" data-tab="business" type="button">Business</button>
+            <button class="tab" role="tab" aria-selected="false" aria-controls="tabPanel" data-tab="overseas" type="button">Overseas</button>
+            <button class="tab" role="tab" aria-selected="false" aria-controls="tabPanel" data-tab="employees" type="button">Government Employees</button>
+            <button class="tab" role="tab" aria-selected="false" aria-controls="tabPanel" data-tab="students" type="button">Students</button>
+            <span class="tab-indicator" id="tabIndicator" aria-hidden="true"></span>
+          </div>
+        </div>
+        <div class="tab-panel card" id="tabPanel" role="tabpanel" aria-live="polite">
+          <ul class="link-list" id="tabLinks"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION D: STATS BAND ============ -->
+    <section class="stats-band" id="government" aria-labelledby="statsTitle">
+      <div class="container">
+        <h2 id="statsTitle" class="sr-only">India at a glance</h2>
+        <p class="stats-kicker reveal">India at a glance</p>
+        <div class="grid-4 stats-grid">
+          <div class="stat reveal"><span class="stat-num" data-target="6700" data-suffix="+">0</span><span class="stat-label">Government websites linked</span></div>
+          <div class="stat reveal"><span class="stat-num" data-target="28" data-suffix="">0</span><span class="stat-label">States · 8 Union Territories</span></div>
+          <div class="stat reveal"><span class="stat-num" data-target="22" data-suffix="">0</span><span class="stat-label">Official languages</span></div>
+          <div class="stat reveal"><span class="stat-num" data-target="1.4" data-suffix="B" data-decimals="1">0</span><span class="stat-label">Citizens served</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION E: ANNOUNCEMENTS TICKER ============ -->
+    <section class="section" id="documents" aria-labelledby="newsTitle">
+      <div class="container">
+        <h2 id="newsTitle" class="section-title reveal">Latest announcements</h2>
+        <div class="ticker reveal" id="ticker">
+          <ul class="ticker-track" id="tickerTrack"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION F: TRUST STRIP ============ -->
+    <section class="section alt trust" id="sectors" aria-labelledby="trustTitle">
+      <div class="container">
+        <h2 id="trustTitle" class="sr-only">Our guarantees</h2>
+        <div class="grid-3">
+          <div class="trust-item reveal">
+            <span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 12h8M12 8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+            <div><h3>Always free</h3><p>Every answer and every link costs nothing to use.</p></div>
+          </div>
+          <div class="trust-item reveal">
+            <span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M4 4l16 16M20 4L4 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+            <div><h3>No ads, ever</h3><p>Nothing is sold, promoted, or paid for in your results.</p></div>
+          </div>
+          <div class="trust-item reveal">
+            <span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26"><rect x="5" y="11" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4" fill="none" stroke="currentColor" stroke-width="2"/></svg></span>
+            <div><h3>Privacy protected</h3><p>No account needed to ask a question.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION G: CTA ============ -->
+    <section class="section cta-section" aria-labelledby="ctaTitle">
+      <div class="container">
+        <div class="cta-card reveal">
+          <h2 id="ctaTitle">Stop searching 100 websites. Ask one question.</h2>
+          <form class="search-wrap compact" id="ctaForm" role="search" autocomplete="off">
+            <div class="search-bar">
+              <label class="sr-only" for="ctaInput">Ask a government question</label>
+              <input id="ctaInput" class="search-input" type="text" placeholder="Ask a government question…" maxlength="200">
+              <button class="submit-btn" type="submit" aria-label="Submit question">
+                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="tricolor-band footer-band" aria-hidden="true"></div>
+    <div class="container footer-grid">
+      <section aria-labelledby="fAbout">
+        <h3 id="fAbout">About</h3>
+        <p>Bharat Portal is the National Portal of India: a single front door to official government information and services.</p>
+      </section>
+      <section aria-labelledby="fKey">
+        <h3 id="fKey">Key Sections</h3>
+        <ul>
+          <li><a href="#government">Government</a></li>
+          <li><a href="#citizens">Citizens</a></li>
+          <li><a href="#documents">Documents</a></li>
+        </ul>
+      </section>
+      <section aria-labelledby="fRes">
+        <h3 id="fRes">Resources</h3>
+        <ul>
+          <li><a href="#top">Web directory</a></li>
+          <li><a href="#top">Accessibility</a></li>
+          <li><a href="#top">Terms of Use</a></li>
+        </ul>
+      </section>
+      <section aria-labelledby="fLinks">
+        <h3 id="fLinks">Important Links</h3>
+        <ul>
+          <li><a href="https://www.india.gov.in" rel="noopener noreferrer" target="_blank">india.gov.in</a></li>
+          <li><a href="https://www.mygov.in" rel="noopener noreferrer" target="_blank">MyGov</a></li>
+          <li><a href="https://www.digitalindia.gov.in" rel="noopener noreferrer" target="_blank">Digital India</a></li>
+          <li><a href="https://data.gov.in" rel="noopener noreferrer" target="_blank">Data.gov.in</a></li>
+        </ul>
+      </section>
+      <section aria-labelledby="fFeed">
+        <h3 id="fFeed">Feedback</h3>
+        <ul>
+          <li><a href="#top">Contact</a></li>
+          <li><a href="#top">Report an issue</a></li>
+        </ul>
+      </section>
+    </div>
+    <div class="footer-bottom">
+      <div class="container bottom-inner">
+        <p>A concept reimagining of the National Portal of India · For demonstration purposes</p>
+        <nav class="lang-links" aria-label="Language links">
+          <a href="#top" data-set-lang="en">EN</a>
+          <span aria-hidden="true">|</span>
+          <a href="#top" data-set-lang="hi">हिन्दी</a>
+          <span aria-hidden="true">|</span>
+          <a href="#top" data-set-lang="ta">தமிழ்</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M6 14l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
