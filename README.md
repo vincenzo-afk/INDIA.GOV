@@ -16,6 +16,7 @@ Then visit <http://localhost:8000>.
 
 - `index.html` — page structure and portal content
 - `style.css` — responsive layout and visual styling
+- `fx.js` — visual effects and interaction helpers
 - `app.js` — application interactions
 - `sites.js` — government site and directory data
 
