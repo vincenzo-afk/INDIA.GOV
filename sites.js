@@ -37,8 +37,7 @@ window.GOV_SITES = [
   { name: "Ministry of Commerce", url: "https://commerce.gov.in", cat: "Business", desc: "Trade policy, exports and imports.", kw: "trade export import commerce" },
 
   // ---- Health and welfare ----
-  { name: "CoWIN", url: "https://www.cowin.gov.in", cat: "Health", desc: "COVID-19 vaccination records and certificates.", kw: "vaccine cowin certificate" },
-  { name: "Ayushman Bharat (PM-JAY)", url: "https://pmjay.gov.in", cat: "Health", desc: "National health protection scheme eligibility and hospitals.", kw: "ayushman health insurance pmjay" },
+    { name: "Ayushman Bharat (PM-JAY)", url: "https://pmjay.gov.in", cat: "Health", desc: "National health protection scheme eligibility and hospitals.", kw: "ayushman health insurance pmjay" },
   { name: "Ministry of Health (MoHFW)", url: "https://www.mohfw.gov.in", cat: "Health", desc: "Public health policies, programmes and advisories.", kw: "health mohfw hospital" },
   { name: "CDSCO (Drug Regulator)", url: "https://cdsco.gov.in", cat: "Health", desc: "Drug and medical device regulation.", kw: "drug medicine cdsco regulator" },
   { name: "FSSAI (Food Safety)", url: "https://www.fssai.gov.in", cat: "Health", desc: "Food licensing, safety and standards.", kw: "food safety licence fssai" },
@@ -94,6 +93,6 @@ window.GOV_SITES = [
 /* Live news sources. The browser only reads these if the server allows
    cross-origin requests; otherwise the page shows direct links. */
 window.NEWS_FEEDS = [
-  { name: "PIB Press Releases", url: "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3" },
-  { name: "PIB Features", url: "https://pib.gov.in/RssMain.aspx?ModId=8&Lang=1&Regid=3" }
+  { name: "PIB Press Releases", url: "https://www.pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3" },
+  { name: "PIB Features", url: "https://www.pib.gov.in/RssMain.aspx?ModId=8&Lang=1&Regid=3" }
 ];

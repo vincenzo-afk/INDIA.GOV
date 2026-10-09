@@ -23,8 +23,7 @@
     function init() {
       let saved = null;
       try { saved = localStorage.getItem(KEY); } catch (e) { /* storage blocked */ }
-      const sysDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      apply(saved || (sysDark ? "dark" : "light"));
+            apply(saved || "dark");
       btn.addEventListener("click", () => {
         const next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
         apply(next);
